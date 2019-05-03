@@ -1,0 +1,17 @@
+
+<table class ="table" border="1" style="border:solid 1px black">
+  <tr border="1" style="border:solid 1px black">
+    <th class="th">Name</th>
+     <th class="th">EmployeeId</th>
+      <th class="th">Department</th>
+       <!-- <th class="th">Address</th> -->
+           <th class="th">Action</th>
+  </tr>
+      <tr *ngFor ="let em of emp">
+        <td>{{em.Name}}</td>
+         <td>{{em.EmployeeId}}</td>
+          <td>{{em.Department}}</td>
+           <!-- <td>{{em.Address.Street}}, {{em.Address.State}}, {{em.Address.Pincode}}</td> -->
+           <td><button class ="button" routerLink ="/detail">Detail</button><button class ="button">Delete</button><button class="button">Edit</button></td>
+      </tr>
+</table>
