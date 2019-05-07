@@ -7,7 +7,7 @@ const routes: Routes = [
     path: "emplyoee", component :EmployeeComponentComponent
 
   },
-  { path: "detail", component :EmployeeDetailComponent}
+  { path: "detail/:id", component :EmployeeDetailComponent}
 ];
 
 @NgModule({

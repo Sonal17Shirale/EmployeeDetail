@@ -12,6 +12,6 @@
          <td>{{em.EmployeeId}}</td>
           <td>{{em.Department}}</td>
            <!-- <td>{{em.Address.Street}}, {{em.Address.State}}, {{em.Address.Pincode}}</td> -->
-           <td><button class ="button" routerLink ="/detail">Detail</button><button class ="button">Delete</button><button class="button">Edit</button></td>
+           <td><button class ="button" [routerLink] ="['/detail',em.EmployeeId]">Detail</button><button class ="button">Delete</button><button class="button">Edit</button></td>
       </tr>
 </table>

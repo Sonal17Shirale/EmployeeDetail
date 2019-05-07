@@ -1,3 +1,12 @@
 <p>
   employee-detail works!
 </p>
+<h1>Employee Details</h1>
+ <table *ngIf="employees">
+  <tr>
+      <td>{{employees.Name}}</td>
+         <td>{{employees.EmployeeId}}</td>
+          <td>{{employees.Department}}</td>
+           <td>{{employees.Address.Street}}, {{employees.Address.State}}, {{employees.Address.Pincode}}
+    </tr>
+  </table> 
