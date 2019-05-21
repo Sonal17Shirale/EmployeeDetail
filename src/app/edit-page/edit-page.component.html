@@ -1,0 +1,6 @@
+<form (ngSubmit)="update(userform)" #userform="ngForm">
+   FirstName <td><input type="text" [(ngModel)]="firstName" /></td>
+   LastName <td><input type="text" [(ngModel)]="lastName"/></td>
+    City<td><input type="text" [(ngModel)]="city" /></td>
+<button type="submit">Update</button>
+</form>

@@ -1,12 +1,20 @@
-<p>
-  employee-detail works!
-</p>
-<h1>Employee Details</h1>
- <table *ngIf="employees">
-  <tr>
-      <td>{{employees.Name}}</td>
-         <td>{{employees.EmployeeId}}</td>
-          <td>{{employees.Department}}</td>
-           <td>{{employees.Address.Street}}, {{employees.Address.State}}, {{employees.Address.Pincode}}
-    </tr>
-  </table> 
+
+
+  <div *ngIf ="employees" class ="card">
+    <h1>hiiii</h1>
+    <span class ="card-header-title">
+    Name : 
+    <span>{{employees.firstName}}</span>
+    </span>
+    <span class ="card-header-title">
+    EmployeeId : 
+    <span>{{employees.lastName}}</span>
+    </span>
+    <span class ="card-header-title">
+    Department : 
+    <span>{{employees.city}}</span>
+    </span>
+
+  </div>
+   
+ 

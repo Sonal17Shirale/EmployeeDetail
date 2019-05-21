@@ -10,7 +10,8 @@ import {ActivatedRoute} from '@angular/router'
 export class EmployeeDetailComponent implements OnInit {
 employees : Employee[];
 sub : any;
-empp;
+
+name="sonal";
 
   constructor(private activatedRoutes : ActivatedRoute,private enpService : EmployeeServiceService) {
 
@@ -25,8 +26,10 @@ empp;
     this.activatedRoutes.params.subscribe(data=>{
         let id = data['id'];
        
-    this.enpService.getEmployeeDetail(id).subscribe(param=>{this.employees=param,console.log(this.employees)});
-
+    this.enpService.getEmployeeDetail(id).subscribe(param=>{this.employees=param});
+console.log(this.employees);
       })
   }
+
+  
 }

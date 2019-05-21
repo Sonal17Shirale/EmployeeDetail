@@ -1,17 +1,37 @@
 
 <table class ="table" border="1" style="border:solid 1px black">
   <tr border="1" style="border:solid 1px black">
-    <th class="th">Name</th>
-     <th class="th">EmployeeId</th>
-      <th class="th">Department</th>
+   
+     <!-- <th class="th">ID</th>
+      <th class="th">Title</th> -->
+
+     <th class="th">FirstName</th>
+      <th class="th">LastName</th>
+     <th class="th">City</th>
        <!-- <th class="th">Address</th> -->
            <th class="th">Action</th>
   </tr>
       <tr *ngFor ="let em of emp">
-        <td>{{em.Name}}</td>
-         <td>{{em.EmployeeId}}</td>
-          <td>{{em.Department}}</td>
+       
+         <td>{{em.firstName}}</td>
+          <td>{{em.lastName}}</td>
+           <td>{{em.city}}</td>
            <!-- <td>{{em.Address.Street}}, {{em.Address.State}}, {{em.Address.Pincode}}</td> -->
-           <td><button class ="button" [routerLink] ="['/detail',em.EmployeeId]">Detail</button><button class ="button">Delete</button><button class="button">Edit</button></td>
+           <td><button class ="button" [routerLink] ="['/detail',em._id]">Detail</button><button class ="button" (click)="DeleteEmployee(em._id)">Delete</button><button class="button"  [style.background-color]="isdisable ? 'red' : 'green'" (click)="update(em.j)" routerLink="/edit">Edit</button></td>
       </tr>
+          <tr *ngIf='addEmployee'>
+              
+                 <td><input type="text" [(ngModel)]="firstName" /></td>
+                 <td><input type="text" [(ngModel)]="lastName"/></td>
+                 <td><input type="text" [(ngModel)]="city" /></td>
+                 <td><button class ="button" (click)="SaveData()" value="Save">Save</button></td>
+                 <td><button class ="button" (click)="Cancel()" value="Cancel">Cancel</button></td>
+             </tr>
 </table>
+ <button (click)="AddEmployee()">Add New Entry</button>
+
+
+
+
+
+ 
